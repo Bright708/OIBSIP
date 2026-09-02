@@ -211,7 +211,7 @@ body {
   }
 }
 
-/* Apply animations to hero pieces with intentional stagger */
+/* Applied animations to hero pieces with intentional stagger */
 
 .hero-text h1 {
   will-change: transform, opacity;
