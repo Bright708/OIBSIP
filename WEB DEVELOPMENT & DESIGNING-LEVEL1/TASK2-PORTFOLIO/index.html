@@ -27,7 +27,7 @@
 
       <main id="top">
         <section class="hero container section-spacing">
-          <div class="hero-copy">
+          <div class="hero-copy reveal">
             <p class="eyebrow">Hello, I’m</p>
             <h1>Frimpong Bright Adjei</h1>
             <h2>Frontend Developer &amp; Full-Stack Engineer</h2>
@@ -41,12 +41,15 @@
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="Profile preview">
+          <div
+            class="hero-visual reveal reveal-delay-1"
+            aria-label="Profile preview"
+          >
             <div class="profile-card">
               <div class="avatar-frame">
                 <img
                   class="avatar"
-                  src="./assets/my picture.jpeg"
+                  src="./assets/my picture_.jpeg"
                   alt="Frimpong Bright Adjei portrait"
                 />
               </div>
@@ -72,13 +75,13 @@
         </section>
 
         <section id="about" class="container section-spacing">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">About Me</p>
             <h3>
               Creative problem solver with a passion for thoughtful design.
             </h3>
           </div>
-          <div class="about-content">
+          <div class="about-content reveal reveal-delay-1">
             <p>
               I’m a web developer and digital designer who enjoys turning ideas
               into polished, user-friendly experiences. My work blends aesthetic
@@ -94,35 +97,57 @@
         </section>
 
         <section id="skills" class="container section-spacing">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">Skills</p>
             <h3>Tools and technologies I work with.</h3>
           </div>
 
           <div class="skills-grid">
-            <div class="skill-card"><span>HTML5</span></div>
-            <div class="skill-card"><span>CSS3</span></div>
-            <div class="skill-card"><span>JavaScript</span></div>
-            <div class="skill-card"><span>React</span></div>
-            <div class="skill-card"><span>Figma</span></div>
-            <div class="skill-card"><span>Responsive Design</span></div>
-            <div class="skill-card"><span>Git</span></div>
-            <div class="skill-card"><span>UI/UX</span></div>
-            <div class="skill-card"><span>Java</span></div>
-            <div class="skill-card"><span>Tailwind Css</span></div>
-            <div class="skill-card"><span>Node Js</span></div>
-            <div class="skill-card"><span>Supabase</span></div>
-            <div class="skill-card"><span>Electron</span></div>
+            <div class="skill-card reveal"><span>HTML5</span></div>
+            <div class="skill-card reveal reveal-delay-1">
+              <span>CSS3</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-2">
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-3">
+              <span>React</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-1">
+              <span>Figma</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-2">
+              <span>Responsive Design</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-3"><span>Git</span></div>
+            <div class="skill-card reveal reveal-delay-1">
+              <span>UI/UX</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-2">
+              <span>Java</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-3">
+              <span>Tailwind Css</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-1">
+              <span>Node Js</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-2">
+              <span>Supabase</span>
+            </div>
+            <div class="skill-card reveal reveal-delay-3">
+              <span>Electron</span>
+            </div>
           </div>
         </section>
 
         <section id="projects" class="container section-spacing">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">Projects</p>
             <h3>Selected work and experiments.</h3>
           </div>
 
-          <div class="project-summary">
+          <div class="project-summary reveal reveal-delay-1">
             <p>
               My recent work focuses on building responsive interfaces,
               product-driven experiences, and practical digital tools that solve
@@ -133,7 +158,7 @@
           </div>
 
           <div class="projects-grid">
-            <article class="project-card">
+            <article class="project-card reveal">
               <div class="project-badge">Featured</div>
               <h4>CampusSpace</h4>
               <p>
@@ -148,7 +173,7 @@
               >
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal reveal-delay-1">
               <div class="project-badge alt">Portfolio</div>
               <h4>My Portfolio</h4>
               <p>
@@ -164,7 +189,7 @@
               >
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal reveal-delay-2">
               <div class="project-badge alt">Optimizer</div>
               <h4>Courier &amp; Dispatch Optimizer</h4>
               <p>
@@ -179,7 +204,7 @@
               >
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal reveal-delay-3">
               <div class="project-badge alt">Clone</div>
               <h4>Coinbase Clone</h4>
               <p>
@@ -197,12 +222,12 @@
         </section>
 
         <section id="contact" class="container section-spacing">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">Contact</p>
             <h3>Let’s build something meaningful together.</h3>
           </div>
 
-          <div class="contact-card">
+          <div class="contact-card reveal reveal-delay-1">
             <div>
               <p class="label">Name</p>
               <h4>Frimpong Bright Adjei</h4>
@@ -233,5 +258,25 @@
         </section>
       </main>
     </div>
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: "0px 0px -25px 0px",
+        },
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
   </body>
 </html>
