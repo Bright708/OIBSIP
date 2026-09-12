@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thermal Vector | Temperature Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="status-left">
+                <span class="led"></span>
+                <span class="label">SYSTEM:</span>
+                <span class="value">READY // CONVERTER v2.4</span>
+            </div>
+        </header>
+
+        <main class="converter-card">
+            <div class="title-row">
+                <h1>Temperature Converter</h1>
+                <button class="live-sync" type="button" aria-label="Live sync status">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <span>Live Sync</span>
+          </button>
+            </div>
+
+            <p class="subheading">Real-time Multi-Unit Conversion Engine</p>
+
+            <section class="input-group">
+                <div class="field-label-row">
+                    <div class="field-label">
+                        <i class="fa-solid fa-temperature-half"></i>
+                        <span>SOURCE TEMPERATURE VALUE</span>
+                    </div>
+                    <span class="helper">supports negative &amp; decimal values</span>
+                </div>
+
+                <div class="input-row">
+                    <input id="temperatureInput" type="text" inputmode="decimal" placeholder="25" aria-label="Temperature value" />
+
+                    <div class="unit-select-wrap">
+                        <select id="unitSelect" aria-label="Temperature unit">
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+              </select>
+                    </div>
+                </div>
+
+                <div class="preset-row" aria-label="common temperature presets">
+                    <button class="preset" type="button" data-value="0" data-unit="C">
+              Freezing (0°C)
+            </button>
+                    <button class="preset" type="button" data-value="20" data-unit="C">
+              Room (20°C)
+            </button>
+                    <button class="preset" type="button" data-value="37" data-unit="C">
+              Body (37°C)
+            </button>
+                    <button class="preset" type="button" data-value="100" data-unit="C">
+              Boiling (100°C)
+            </button>
+                    <button class="preset" type="button" data-value="0" data-unit="K">
+              Abs Zero (0 K)
+            </button>
+                </div>
+            </section>
+
+            <div class="action-row">
+                <button id="convertBtn" class="primary-btn" type="button">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <span>Convert Temperature</span>
+          </button>
+                <div class="utility-buttons">
+                    <button class="utility-btn" type="button" aria-label="Reset input">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+                    <button class="utility-btn" type="button" aria-label="Clear input">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+                </div>
+            </div>
+
+            <div id="validationMessage" class="validation-message" aria-live="polite"></div>
+
+            <section class="output-panel">
+                <div class="output-header">
+                    <div class="field-label">
+                        <i class="fa-solid fa-wave-square"></i>
+                        <span>SIMULTANEOUS OUTPUT MATRIX</span>
+                    </div>
+                    <span class="helper">Dynamic Precision (2-4 dp)</span>
+                </div>
+
+                <div class="result-grid">
+                    <article class="result-card celsius">
+                        <div class="unit-label-row">
+                            <span class="result-unit">Celsius</span>
+                            <span class="unit-mark">°C</span>
+                        </div>
+                        <div id="celsiusResult" class="result-value">0.00</div>
+                        <small class="context">Metric standard</small>
+                    </article>
+
+                    <article class="result-card fahrenheit">
+                        <div class="unit-label-row">
+                            <span class="result-unit">Fahrenheit</span>
+                            <span class="unit-mark">°F</span>
+                        </div>
+                        <div id="fahrenheitResult" class="result-value">32.00</div>
+                        <small class="context">Imperial scale</small>
+                    </article>
+
+                    <article class="result-card kelvin">
+                        <div class="unit-label-row">
+                            <span class="result-unit">Kelvin</span>
+                            <span class="unit-mark">K</span>
+                        </div>
+                        <div id="kelvinResult" class="result-value">273.15</div>
+                        <small class="context">Thermodynamic SI</small>
+                    </article>
+                </div>
+
+                <div class="formula-row">
+                    <span>FORMULAS</span>
+                    <span id="formulaText">°F = (°C × 9/5) + 32 | K = °C + 273.15</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
