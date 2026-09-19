@@ -1,0 +1,322 @@
+:root {
+  --bg-grid: #080c10;
+  --chassis-bg: #121820;
+  --chassis-border: #222d3a;
+  --display-bg: #070a0e;
+  --display-border: #1a2432;
+  --amber-text: #ffb100;
+  --mint-accent: #4efa94;
+  --mint-glow: rgba(78, 250, 148, 0.4);
+  --danger-red: #d32f2f;
+  --danger-hover: #b71c1c;
+  --btn-num-bg: #1e2834;
+  --btn-num-border: #2a3748;
+  --btn-num-hover: #283546;
+  --btn-op-bg: #192330;
+  --btn-op-border: #28374a;
+  --btn-op-text: #63d3ff;
+  --text-main: #e2effa;
+  --text-muted: #647a92;
+  --font-mono: "JetBrains Mono", "Share Tech Mono", monospace;
+  --font-ui: "Chakra Petch", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background-color: white;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--text-main);
+  font-family: var(--font-ui);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Status Bar Above Chassis */
+
+.power-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--mint-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--mint-accent);
+  margin-right: 6px;
+}
+
+/* Calculator Container */
+
+.calculator-chassis {
+  width: 100%;
+  max-width: 440px;
+  background: var(--chassis-bg);
+  border: 1px solid var(--chassis-border);
+  border-radius: 16px;
+  padding: 24px 20px 18px;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.chassis-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+}
+
+.model-badge {
+  background: #253344;
+  color: var(--text-main);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.model-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #c0d1e3;
+}
+
+.model-sub {
+  margin-left: auto;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Display Box */
+
+.display-panel {
+  background: var(--display-bg);
+  border: 1px solid var(--display-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.display-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.active-badge {
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.6rem;
+}
+
+.main-readout {
+  font-family: var(--font-mono);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--amber-text);
+  text-align: right;
+  text-shadow: 0 0 12px rgba(255, 177, 0, 0.35);
+  word-break: break-all;
+  min-height: 3.2rem;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.matrix-label {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  letter-spacing: 0.16em;
+  margin-bottom: 14px;
+}
+
+/* Grid Layout */
+
+.keypad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 10px;
+  height: 56px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.12s ease;
+  outline: none;
+  position: relative;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.btn-wide {
+  grid-column: span 2;
+}
+
+/* Number Keys */
+
+.btn-num {
+  background: var(--btn-num-bg);
+  border: 1px solid var(--btn-num-border);
+  color: var(--text-main);
+  box-shadow: 0 4px 0 #121922;
+}
+
+.btn-num:hover {
+  background: var(--btn-num-hover);
+  border-color: #3b4d64;
+}
+
+.btn-num:active {
+  box-shadow: 0 1px 0 #121922;
+}
+
+/* Operators */
+
+.btn-operator {
+  background: var(--btn-op-bg);
+  border: 1px solid var(--btn-op-border);
+  color: var(--btn-op-text);
+  box-shadow: 0 4px 0 #0f1620;
+}
+
+.btn-operator:hover {
+  background: #202d3e;
+}
+
+.btn-operator.active-op {
+  border-color: var(--btn-op-text);
+  box-shadow: 0 0 10px rgba(99, 211, 255, 0.3);
+}
+
+/* Clear/Danger Button */
+
+.btn-danger {
+  background: var(--danger-red);
+  border: 1px solid #ef5350;
+  color: #ffffff;
+  box-shadow: 0 4px 0 #8e0000;
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+}
+
+.btn-danger:active {
+  box-shadow: 0 1px 0 #8e0000;
+}
+
+.btn-dark {
+  background: #251b22;
+  border: 1px solid #4a2933;
+  color: #ff8fa3;
+  box-shadow: 0 4px 0 #160e14;
+}
+
+.btn-dark:hover {
+  background: #32222d;
+}
+
+/* Labels under text on CLR / DEL */
+
+.btn-primary-text {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.btn-sub-text {
+  font-size: 0.52rem;
+  opacity: 0.75;
+  margin-top: 3px;
+  letter-spacing: 0.05em;
+}
+
+/* Equals Button */
+
+.btn-equals {
+  background: var(--mint-accent);
+  border: 1px solid #a1ffc8;
+  color: #07150c;
+  box-shadow:
+    0 4px 0 #28a05c,
+    0 0 16px var(--mint-glow);
+  font-size: 1.5rem;
+}
+
+.btn-equals:hover {
+  background: #63ffa5;
+  box-shadow:
+    0 4px 0 #28a05c,
+    0 0 22px rgba(78, 250, 148, 0.6);
+}
+
+.btn-equals:active {
+  box-shadow: 0 1px 0 #28a05c;
+}
+
+/* Footer Tag */
+
+.chassis-footer {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.vent-lines {
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .calculator-chassis {
+    padding: 18px 14px 14px;
+  }
+  .btn {
+    height: 50px;
+    font-size: 1.1rem;
+  }
+  .main-readout {
+    font-size: 2.2rem;
+  }
+}

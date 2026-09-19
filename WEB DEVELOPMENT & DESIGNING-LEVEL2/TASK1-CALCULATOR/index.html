@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TE-84 LAB INSTRUMENT</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=JetBrains+Mono:wght@500;700;800&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Main Calculator Unit -->
+    <main class="calculator-chassis">
+      <!-- Top Header Label -->
+      <header class="chassis-header">
+        <span class="model-badge">TE-84</span>
+        <span class="model-title">LAB INSTRUMENT</span>
+        <span class="model-sub">CAL: 2025.Q1 // ACC: HIGH</span>
+      </header>
+
+      <!-- Recessed Display Screen -->
+      <section class="display-panel" aria-label="Calculator Display">
+        <div class="display-meta">
+          <span id="expression-preview" class="expr-line">REG 01 // FLOAT</span>
+          <span class="active-badge">ACTIVE</span>
+        </div>
+        <div id="main-display" class="main-readout">0</div>
+      </section>
+
+      <div class="matrix-label">PRIMARY MATRIX // 20-KEY</div>
+
+      <!-- 4x5 Keypad Grid -->
+      <section class="keypad-grid">
+        <!-- Row 1 -->
+        <button
+          type="button"
+          class="btn btn-danger btn-wide"
+          data-action="clear"
+        >
+          <span class="btn-primary-text">CLR</span>
+          <span class="btn-sub-text">RESET [ESC]</span>
+        </button>
+        <button type="button" class="btn btn-dark" data-action="delete">
+          <span class="btn-primary-text">DEL</span>
+          <span class="btn-sub-text">BKSP</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-operator"
+          data-action="operator"
+          data-value="÷"
+        >
+          ÷
+        </button>
+
+        <!-- Row 2 -->
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="number"
+          data-value="7"
+        >
+          7
+        </button>
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="number"
+          data-value="8"
+        >
+          8
+        </button>
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="number"
+          data-value="9"
+        >
+          9
+        </button>
+        <button
+          type="button"
+          class="btn btn-operator"
+          data-action="operator"
+          data-value="×"
+        >
+          ×
+        </button>
+
+        <!-- Row 3 -->
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="number"
+          data-value="4"
+        >
+          4
+        </button>
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="number"
+          data-value="5"
+        >
+          5
+        </button>
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="number"
+          data-value="6"
+        >
+          6
+        </button>
+        <button
+          type="button"
+          class="btn btn-operator"
+          data-action="operator"
+          data-value="-"
+        >
+          −
+        </button>
+
+        <!-- Row 4 -->
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="number"
+          data-value="1"
+        >
+          1
+        </button>
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="number"
+          data-value="2"
+        >
+          2
+        </button>
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="number"
+          data-value="3"
+        >
+          3
+        </button>
+        <button
+          type="button"
+          class="btn btn-operator"
+          data-action="operator"
+          data-value="+"
+        >
+          +
+        </button>
+
+        <!-- Row 5 -->
+        <button
+          type="button"
+          class="btn btn-num btn-wide"
+          data-action="number"
+          data-value="0"
+        >
+          0
+        </button>
+        <button
+          type="button"
+          class="btn btn-num"
+          data-action="decimal"
+          data-value="."
+        >
+          .
+        </button>
+        <button type="button" class="btn btn-equals" data-action="equals">
+          =
+        </button>
+      </section>
+
+      <!-- Footer Tag -->
+      <footer class="chassis-footer">
+        <span>[MODEL: JS-CALC // NO-EVAL LOGIC ENGINE]</span>
+        <span class="vent-lines">|||||</span>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
