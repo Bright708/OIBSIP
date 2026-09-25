@@ -1,12 +1,663 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-</head>
+    <title>Kwame Nkrumah // Pan-African Historical Archive</title>
 
-<body></body>
+    <!-- Fonts: Playfair Display for Serifs, Inter & JetBrains Mono for Technical Annotations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <!-- Top Metadata Bar -->
+    <div class="top-meta-bar">
+      <div class="meta-left">
+        <span class="archive-title">PAN-AFRICAN HISTORICAL ARCHIVE</span>
+      </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="site-header">
+      <nav class="nav-container">
+        <div class="nav-links">
+          <a href="#overview" class="nav-link active">OVERVIEW</a>
+          <a href="#biography" class="nav-link">BIOGRAPHY</a>
+          <a href="#quotations" class="nav-link">QUOTATIONS</a>
+          <a href="#timeline" class="nav-link">TIMELINE</a>
+          <a href="#bibliography" class="nav-link">ARCHIVAL SOURCES</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section 1: Hero Overview (Dark Theme) -->
+      <section id="overview" class="hero-section">
+        <div class="hero-container">
+          <!-- Left Hero Column -->
+          <div class="hero-content">
+            <div class="folio-tag">
+              <span>FOLIO NO. 1957</span>
+              <span class="tag-gold">SPECIAL HISTORICAL MONOGRAPH</span>
+            </div>
+
+            <div class="subject-badge">OSAGYEFO // FATHER OF MODERN AFRICA</div>
+
+            <h1 class="subject-title">Kwame Nkrumah</h1>
+
+            <h2 class="subject-tagline">
+              Visionary Statesman, Pan-African Champion, and Architect of
+              African Independence
+            </h2>
+
+            <div class="subject-dates">(1909–1972)</div>
+
+            <p class="hero-abstract">
+              The decisive catalyst whose triumph on the 6th of March 1957
+              shattered colonial hegemony across Sub-Saharan Africa,
+              inaugurating an irreversible era of continental sovereignty,
+              intellectual reclamation, and unified African identity.
+            </p>
+
+            <div class="hero-stats-grid">
+              <div class="stat-card">
+                <span class="stat-label">BORN</span>
+                <span class="stat-value">21 September 1909</span>
+                <span class="stat-sub">Nkroful, Gold Coast</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">INDEPENDENCE</span>
+                <span class="stat-value">6 March 1957</span>
+                <span class="stat-sub">Prime Minister & President</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">CONTINENTAL IMPACT</span>
+                <span class="stat-value">Co-Founder, OAU</span>
+                <span class="stat-sub">Addis Ababa Charter, 1963</span>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#biography" class="btn btn-gold"
+                >READ HISTORICAL FOLIO →</a
+              >
+              <a href="#timeline" class="btn btn-outline"
+                >VIEW MILESTONE LEDGER <span>⟳</span></a
+              >
+            </div>
+          </div>
+
+          <!-- Right Hero Column: Archival Portrait -->
+          <div class="hero-portrait-card">
+            <div class="portrait-frame">
+              <img
+                src="./asset/Dr.Nkrumah.jpg"
+                alt="Dr. Kwame Nkrumah at Christiansborg Castle"
+                class="portrait-img"
+              />
+              <div class="portrait-caption">
+                — Osagyefo Dr. Kwame Nkrumah at Christiansborg Castle, Osu //
+                Archival Negative Registry / National Heritage Collection //
+                Public Domain Memorial Deposit
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Quotations Display Section (Dark Accent) -->
+      <section id="quotations" class="quotes-section">
+        <div class="quotes-container">
+          <!-- Primary Feature Quote -->
+          <blockquote class="primary-quote-card">
+            <div class="quote-mark">“</div>
+            <p class="quote-text">
+              At long last, the battle has ended! And thus Ghana, our beloved
+              country, is free forever!... We have awakened. We will not sleep
+              anymore. Today, from now on, there is a new African in the world!
+            </p>
+            <footer class="quote-attribution">
+              <span class="quote-author"
+                >— DR. KWAME NKRUMAH, INDEPENDENCE PROCLAMATION, OLD POLO
+                GROUNDS, ACCRA</span
+              >
+              <span class="quote-date-tag">Midnight of 5-6 March 1957</span>
+            </footer>
+          </blockquote>
+
+          <!-- Secondary Supporting Quotes Grid -->
+          <div class="secondary-quotes-grid">
+            <blockquote class="sub-quote-card">
+              <p class="sub-quote-text">
+                “We face neither East nor West: we face forward.”
+              </p>
+              <footer class="sub-quote-attr">
+                <span>ADDRESS TO THE NATIONAL ASSEMBLY</span>
+                <span>Accra, 1960</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="sub-quote-card">
+              <p class="sub-quote-text">
+                “The independence of Ghana is meaningless unless it is linked up
+                with the total liberation of the African continent.”
+              </p>
+              <footer class="sub-quote-attr">
+                <span>ALL-AFRICAN PEOPLES' ASSEMBLY</span>
+                <span>Declaration, March 1957</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Biography Content Section (Parchment Light Theme) -->
+      <section id="biography" class="biography-section">
+        <div class="biography-container">
+          <div class="bio-header">
+            <span class="bio-section-tag"
+              >BIOGRAPHICAL RECORD // TRACTATE II</span
+            >
+            <h2 class="bio-main-heading">A Life in Service of Liberation</h2>
+            <p class="bio-sub-heading">
+              From the rural banks of Nkroful to the rostrum of the United
+              Nations: the forging of modern Pan-African statecraft.
+            </p>
+          </div>
+
+          <div class="bio-grid">
+            <!-- Left Column: Detailed Narrative -->
+            <article class="bio-narrative">
+              <section class="bio-chapter">
+                <h3 class="chapter-title">
+                  I. Genesis in Nkroful & Academic Crucible
+                </h3>
+                <p class="chapter-body drop-cap">
+                  Born on 21 September 1909 into the pastoral Nzema territory of
+                  Nkroful, Francis Nwia Kofi Kwame Nkrumah displayed early
+                  intellectual promise that quickly surpassed local parochial
+                  schools. Following mentorship at the revered Prince of Wales
+                  College at Achimota under Dr. James Kwegyir Aggrey, Nkrumah
+                  sailed in 1935 for the United States. At Lincoln University in
+                  Pennsylvania—the oldest historically Black college in
+                  America—and subsequently at the University of Pennsylvania, he
+                  steeped his intellect in philosophy, economics, theology, and
+                  anti-imperialist scholarship. It was during these intense
+                  years abroad, complemented by postgraduate study at the London
+                  School of Economics, that he established formative alliances
+                  with seminal figures including W.E.B. Du Bois, C.L.R. James,
+                  and George Padmore.
+                </p>
+
+                <figure class="embedded-plate">
+                  <div class="plate-img-wrapper">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/5th_Pan-African_Congress_Manchester_1945.jpg/640px-5th_Pan-African_Congress_Manchester_1945.jpg"
+                      alt="5th Pan-African Congress 1945"
+                    />
+                  </div>
+                  <figcaption class="plate-caption">
+                    <span class="plate-num">DOCUMENTARY PLATE NO. 12</span>
+                    <strong>Manchester 1945: The Pan-African Rubicon</strong>
+                    Serving as joint secretary of the 5th Pan-African Congress,
+                    Nkrumah drafted the manifests demanding immediate democratic
+                    rights and total sovereignty for African peoples worldwide.
+                  </figcaption>
+                </figure>
+              </section>
+
+              <section class="bio-chapter">
+                <h3 class="chapter-title">
+                  II. The Return, Positive Action, and People's Will
+                </h3>
+                <p class="chapter-body">
+                  Nkrumah returned to his homeland in December 1947 at the
+                  invitation of the United Gold Coast Convention (UGCC) to serve
+                  as General Secretary. However, recognizing that aristocratic
+                  constitutional incrementalism could never quench the
+                  populace's yearning for emancipation, he severed ties in June
+                  1949 to launch the Convention People's Party (CPP). Chanting
+                  the resonant rallying cry <em>"Self-Government NOW!"</em>, he
+                  forged an unprecedented coalition that united railroad
+                  unionists, cocoa farmers, dockers, and the formidable "market
+                  women" of Accra and Kumasi.
+                </p>
+                <p class="chapter-body">
+                  In January 1950, Nkrumah launched the 'Positive Action'
+                  campaign—a nationwide movement of non-violent boycotts,
+                  strikes, and civil non-cooperation inspired by Gandhian
+                  non-violence. Colonial authorities arrested and imprisoned
+                  Nkrumah at James Fort. Yet his moral authority only expanded:
+                  in the 1951 legislative elections, he contested his seat from
+                  within his prison cell, securing a landslide triumph that
+                  compelled British Governor Sir Charles Arden-Clarke to release
+                  him directly from captivity to form the Executive Council.
+                </p>
+              </section>
+
+              <section class="bio-chapter">
+                <h3 class="chapter-title">
+                  III. The Midnight Sun of 6 March 1957
+                </h3>
+                <p class="chapter-body">
+                  At midnight on 5–6 March 1957, standing before a surging
+                  gathering of hundreds of thousands at the Old Polo Grounds in
+                  Accra, Nkrumah lowered the British Union Jack and hoisted the
+                  Red, Gold, and Green flag of Ghana, centered with the
+                  indomitable Five-Pointed Black Star. Ghana emerged as the
+                  first sub-Saharan colony to cast off European imperial rule.
+                  The proclamation shook diplomatic capitals worldwide, directly
+                  inspiring national liberation struggles across Kenya, Guinea,
+                  the Congo, Algeria, and the American civil rights movement led
+                  by Dr. Martin Luther King Jr., who attended the ceremonies in
+                  person.
+                </p>
+              </section>
+
+              <section class="bio-chapter">
+                <h3 class="chapter-title">
+                  IV. Statecraft, Industrial Vision, and The Continental Union
+                </h3>
+                <p class="chapter-body">
+                  As head of state, Nkrumah spearheaded audacious modernization
+                  initiatives intended to establish authentic economic autonomy.
+                  He commissioned the gargantuan Akosombo Hydroelectric Dam on
+                  the Volta River, founded the modern deep-water industrial port
+                  of Tema, dramatically expanded the University of Ghana at
+                  Legon, and founded the Kwame Nkrumah University of Science and
+                  Technology in Kumasi. Internationally, he championed the
+                  Non-Aligned Movement and organized the 1958 All-African
+                  Peoples' Conference. In May 1963, his tireless diplomacy
+                  culminated in the signing of the Charter of the Organisation
+                  of African Unity (OAU) in Addis Ababa, institutionalizing the
+                  pan-continental project.
+                </p>
+              </section>
+            </article>
+
+            <!-- Right Column: Sidebar Archival Registers -->
+            <aside class="bio-sidebar">
+              <div class="sidebar-card">
+                <span class="card-badge">HISTORICAL REGISTER</span>
+                <h4 class="card-title">Manchester 1945 Manifest</h4>
+                <p class="card-text">
+                  “We say to the peoples of the colonies that they must fight
+                  for these goals by all means at their disposal. The Fifth
+                  Pan-African Congress calls upon the workers and farmers of the
+                  colonies to organize.”
+                </p>
+                <div class="card-footer">
+                  <span>Folio REF: MCR-1945</span>
+                  <span class="link-gold">On Registry</span>
+                </div>
+              </div>
+
+              <div class="sidebar-card">
+                <div class="sidebar-img-wrapper">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Akosombo_Dam.jpg/640px-Akosombo_Dam.jpg"
+                    alt="Akosombo Dam Project"
+                  />
+                </div>
+                <span class="card-badge">INFRASTRUCTURE PROJECT</span>
+                <h4 class="card-title">The Volta River Project (Akosombo)</h4>
+                <p class="card-text">
+                  Completed in 1965, generating electrical power to sustain
+                  domestic heavy industry, aluminium smelting, and regional grid
+                  interconnections across West Africa.
+                </p>
+              </div>
+
+              <div class="sidebar-card">
+                <span class="card-badge">DIPLOMATIC COORDINATES</span>
+                <ul class="meta-list">
+                  <li>
+                    <strong>Party:</strong> Convention People's Party (CPP)
+                  </li>
+                  <li>
+                    <strong>Key Publications:</strong> <em>Neo-Colonialism</em>,
+                    <em>Africa Must Unite</em>, <em>Consciencism</em>
+                  </li>
+                  <li>
+                    <strong>Honorary Title:</strong> <em>Osagyefo</em> ("The
+                    Victorious Redeemer" in Akan)
+                  </li>
+                  <li>
+                    <strong>Resting Place:</strong> Nkrumah Memorial Park, High
+                    Street, Accra
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sidebar-card dark-inscription-card">
+                <span class="card-badge badge-red">ARCHIVAL INSCRIPTION</span>
+                <blockquote class="dark-card-quote">
+                  “Action without thought is blindness; thought without action
+                  is abortive.”
+                </blockquote>
+                <span class="dark-card-author"
+                  >— Kwame Nkrumah, Consciencism (1964)</span
+                >
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Timeline Milestones Section (Light Gray Theme) -->
+      <section id="timeline" class="timeline-section">
+        <div class="timeline-container">
+          <div class="timeline-header">
+            <span class="timeline-tag">HISTORICAL CHRONOLOGY // ANNALIUM</span>
+            <h2 class="timeline-title">Chronicle of a Transformative Era</h2>
+            <p class="timeline-sub">
+              Key Milestones from Village School to World Statesman
+            </p>
+          </div>
+
+          <div class="timeline-tree">
+            <div class="timeline-line"></div>
+
+            <!-- Timeline Item 1 -->
+            <div class="timeline-node left-node">
+              <div class="node-badge">1909</div>
+              <div class="node-content">
+                <span class="node-cat"
+                  >BIRTH & ROOTS // Western Province Registry • Gold Coast
+                  Colony</span
+                >
+                <h3 class="node-title">Birth at Nkroful</h3>
+                <p class="node-desc">
+                  Born in the Western Province of the Gold Coast. Raised in a
+                  close-knit matrilineal community, instilling early
+                  appreciation for Akan values and communal responsibility.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-node right-node">
+              <div class="node-badge">1935–45</div>
+              <div class="node-content">
+                <span class="node-cat"
+                  >DIASPORIC EDUCATION // Lincoln University • UPenn • LSE
+                  London</span
+                >
+                <h3 class="node-title">Academic & Ideological Crucible</h3>
+                <p class="node-desc">
+                  Studies across America and England; serves as leader of the
+                  African Students' Association; co-organizes the watershed 5th
+                  Pan-African Congress in Manchester alongside Du Bois.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-node left-node">
+              <div class="node-badge">1949</div>
+              <div class="node-content">
+                <span class="node-cat"
+                  >MASS POLITICS // Saltpond Convention Grounds • June 12</span
+                >
+                <h3 class="node-title">Birth of the CPP</h3>
+                <p class="node-desc">
+                  Founding of the Convention People's Party (CPP) at Saltpond.
+                  Promulgates the doctrine of "Self-Government NOW!" and
+                  initiates non-violent "Positive Action" resistance.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-node right-node">
+              <div class="node-badge">1951</div>
+              <div class="node-content">
+                <span class="node-cat"
+                  >TRIUMPH FROM CAPTIVITY // James Fort Prison • Accra Central
+                  Constituency</span
+                >
+                <h3 class="node-title">From Prison to Leader of Government</h3>
+                <p class="node-desc">
+                  Incarcerated at James Fort, he wins 22,780 of 23,122 votes in
+                  Accra. Released by royal prerogative and appointed Leader of
+                  Government Business to form the territory's ministry.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="timeline-node left-node">
+              <div class="node-badge">1957</div>
+              <div class="node-content">
+                <span class="node-cat"
+                  >SOVEREIGN DAWN // Midnight 6 March 1957 • Accra</span
+                >
+                <h3 class="node-title">Independence of Ghana</h3>
+                <p class="node-desc">
+                  Midnight declaration on 6 March at the Old Polo Grounds,
+                  inaugurating Ghana as the first independent Sub-Saharan nation
+                  and establishing Accra as the mecca of anti-colonial
+                  resistance.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 6 -->
+            <div class="timeline-node right-node">
+              <div class="node-badge">1960</div>
+              <div class="node-content">
+                <span class="node-cat"
+                  >THE REPUBLIC // Inauguration of the First Republic</span
+                >
+                <h3 class="node-title">First Republic & Pan-African Vision</h3>
+                <p class="node-desc">
+                  Ghana is declared a sovereign republic, ending nominal
+                  Commonwealth dominion status. Nkrumah is sworn in as the first
+                  President, immediately declaring support for southern African
+                  liberation struggles.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 7 -->
+            <div class="timeline-node left-node">
+              <div class="node-badge">1963</div>
+              <div class="node-content">
+                <span class="node-cat"
+                  >CONTINENTAL ARCHITECTURE // Africa Hall • Addis Ababa,
+                  Ethiopia</span
+                >
+                <h3 class="node-title">Founding of the OAU</h3>
+                <p class="node-desc">
+                  Nkrumah meets in Addis Ababa alongside Haile Selassie, Gamal
+                  Abdel Nasser, and Julius Nyerere, ratifying the historic
+                  charter of the Organisation of African Unity.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 8 -->
+            <div class="timeline-node right-node">
+              <div class="node-badge">1972</div>
+              <div class="node-content">
+                <span class="node-cat"
+                  >IMMORTALITY // Memorial Mausoleum • High Street, Accra</span
+                >
+                <h3 class="node-title">Enduring Legacy & Repatriation</h3>
+                <p class="node-desc">
+                  Nkrumah passes away in Bucharest while in exile. He is later
+                  repatriated and honored with full state honors, permanently
+                  enshrined at the Kwame Nkrumah Memorial Park in central Accra.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Bibliography & Archival Resources (Dark Footer Area) -->
+      <section id="bibliography" class="bibliography-section">
+        <div class="bibliography-container">
+          <div class="biblio-main">
+            <span class="biblio-tag">SELECTED ESSENTIAL BIBLIOGRAPHY</span>
+            <h2 class="biblio-heading">The Nkrumah Literary Corpus</h2>
+            <p class="biblio-sub">
+              Major treatises, political philosophies, and archival speeches
+              authored by Dr. Kwame Nkrumah, maintained under the Pan-African
+              Digital Collections:
+            </p>
+
+            <div class="books-grid">
+              <div class="book-card">
+                <span class="book-tag">TRACTATE • 1957</span>
+                <h3 class="book-title">
+                  Ghana: The Autobiography of Kwame Nkrumah
+                </h3>
+                <p class="book-desc">
+                  Personal accounts of early education, prison term, and
+                  constitutional negotiations.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <span class="book-tag">TREATISE • 1963</span>
+                <h3 class="book-title">Africa Must Unite</h3>
+                <p class="book-desc">
+                  The foundational operational framework for total continental
+                  integration and economic independence.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <span class="book-tag">PHILOSOPHY • 1964</span>
+                <h3 class="book-title">
+                  Consciencism: Philosophy and Ideology
+                </h3>
+                <p class="book-desc">
+                  Synthesis of traditional African communalism, Islamic
+                  influence, and Euro-Christian experience.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <span class="book-tag">ECONOMIC CRITIQUE • 1965</span>
+                <h3 class="book-title">
+                  Neo-Colonialism: The Last Stage of Imperialism
+                </h3>
+                <p class="book-desc">
+                  Forewarning regarding multilateral financial leverage over
+                  newly liberated sovereign states.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Archival Links Widget -->
+          <div class="archival-widget">
+            <div class="widget-header">
+              <h3 class="widget-title">Archival Exploration</h3>
+            </div>
+            <p class="widget-text">
+              Access the complete transcripts, audiotapes of speeches, and
+              unreleased state correspondence preserved within public
+              repositories worldwide.
+            </p>
+
+            <a
+              href="https://en.wikipedia.org/wiki/Kwame_Nkrumah"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-gold btn-full"
+            >
+              EXPLORE WIKIPEDIA HISTORICAL FOLIO ↗
+            </a>
+
+            <a
+              href="https://commons.wikimedia.org/wiki/Category:Kwame_Nkrumah"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-dark-archive btn-full"
+            >
+              WIKIMEDIA PUBLIC ARCHIVES
+            </a>
+
+            <div class="widget-footer-note">
+              Digital Preservation Protocol verified under the Pan-African
+              Archival Trust • Ref. FOLIO-1957-KN
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col brand-col">
+          <h3 class="footer-brand">Pan-African Historical Archive</h3>
+          <p class="footer-about">
+            Dedicated to the rigorous transcription, preservation, and scholarly
+            broadsheet publication of twentieth-century biographical monuments
+            and literary chronicles.
+          </p>
+
+          <div class="footer-board-tag">
+            CURATORIAL BOARD • SPECIAL COLLECTIONS DIVISION
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">MONOGRAPH</h4>
+          <ul class="footer-links">
+            <li><a href="#overview">Curatorial Note</a></li>
+            <li><a href="#biography">Editorial Folio</a></li>
+            <li><a href="#overview">Photographic Mounts</a></li>
+            <li><a href="#bibliography">Manuscript Register</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">INDICES</h4>
+          <ul class="footer-links">
+            <li><a href="#bibliography">Archival Citations</a></li>
+            <li><a href="#timeline">Index of Names</a></li>
+            <li><a href="#biography">Epistolary Record</a></li>
+            <li><a href="#quotations">Provenance Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">REPOSITORY DISPATCH</h4>
+          <p class="footer-dispatch-text">
+            Transcriptions published quarterly in limited deckle-edge broadsheet
+            editions.
+          </p>
+          <span class="issn-tag">ISSN 1928–4402 • London & Accra</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span
+          >© MCMLXXIV Pan-African Historical Archive Press. All historical
+          transcriptions registered under Archival Trust.</span
+        >
+        <div class="bottom-links">
+          <a href="#overview">Reading Terms</a>
+
+          <a href="#overview">Archival Reproduction Protocol</a>
+
+          <a href="#overview">Colophon</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
 </html>
