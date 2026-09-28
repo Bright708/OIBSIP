@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Flow - Workspace</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="brand-text">
+                    <h2>Task Flow</h2>
+                    <span>Workspace</span>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-label">VIEWS</span>
+                <ul class="nav-links">
+                    <li class="active"><i class="fa-regular fa-calendar"></i> Today</li>
+                    <li><i class="fa-regular fa-clock"></i> Upcoming</li>
+                    <li><i class="fa-regular fa-folder"></i> Projects</li>
+                    <li><i class="fa-regular fa-circle-check"></i> Completed</li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-label">TAGS & LISTS</span>
+                <ul class="tags-list">
+                    <li>
+                        <span class="dot work"></span> Work <span class="count">12</span>
+                    </li>
+                    <li>
+                        <span class="dot personal"></span> Personal
+                        <span class="count">4</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <span class="plan-badge">Pro Plan</span>
+                <span class="plan-desc">Unlimited Workspaces</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <header class="top-header">
+                <div class="header-date">
+                    <i class="fa-regular fa-calendar-days"></i> Monday, Sep 28
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search or filter..." />
+                        <span class="shortcut">⌘K</span>
+                    </div>
+                    <button class="icon-btn"><i class="fa-regular fa-bell"></i></button>
+                    <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                </div>
+            </header>
+
+            <!-- Dashboard Banner -->
+            <section class="dashboard-banner">
+                <div class="banner-info">
+                    <div class="workspace-tag">
+                        <span class="sparkle"><i class="fa-solid fa-wand-magic-sparkles"></i> FOCUSED
+                WORKSPACE</span
+              >
+              <span class="tag-date">• Thursday, Oct 24</span>
+                    </div>
+                    <h1 class="page-title">
+                        My Day <i class="fa-solid fa-circle-check title-check"></i>
+                    </h1>
+                    <p class="subtitle">
+                        Good morning, Alex. Here is your productivity breakdown for today.
+                    </p>
+                </div>
+
+                <div class="metrics-cards">
+                    <div class="metric-card">
+                        <div class="metric-icon purple">
+                            <i class="fa-regular fa-clipboard"></i>
+                        </div>
+                        <div class="metric-data">
+                            <span class="metric-label">PENDING</span>
+                            <h3 id="pending-metric-count">0 Tasks</h3>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon green">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="metric-data">
+                            <span class="metric-label">COMPLETION</span>
+                            <h3 id="completion-metric-rate">0%</h3>
+                        </div>
+                    </div>
+                    <div class="metric-card score-card">
+                        <div class="score-ring">80</div>
+                        <div class="metric-data">
+                            <span class="metric-label">FOCUS SCORE</span>
+                            <span class="metric-trend"><i class="fa-solid fa-arrow-trend-up"></i> Optimal</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Task Input Bar -->
+        <section class="task-input-section">
+          <div class="input-wrapper">
+            <i class="fa-solid fa-plus input-icon"></i>
+            <input
+              type="text"
+              id="task-input"
+              placeholder="What needs to be done today?"
+            />
+
+            <div class="priority-selector">
+              <button class="priority-btn" data-priority="High">High</button>
+              <button class="priority-btn active" data-priority="Medium">
+                Medium
+              </button>
+              <button class="priority-btn" data-priority="Low">Low</button>
+            </div>
+
+            <div class="tag-selector">
+              <i class="fa-solid fa-briefcase"></i>
+              <select id="task-tag">
+                <option value="Work">Work</option>
+                <option value="Dev">Dev</option>
+                <option value="Meetings">Meetings</option>
+                <option value="Project">Project</option>
+                <option value="Personal">Personal</option>
+              </select>
+            </div>
+
+            <button id="add-task-btn" class="btn-primary">
+              <i class="fa-solid fa-plus"></i> Add Task
+            </button>
+          </div>
+        </section>
+
+        <!-- Task Lists Grid -->
+        <section class="task-columns">
+          <!-- Pending List Column -->
+          <div class="task-column">
+            <div class="column-header">
+              <div class="header-left">
+                <h2>Pending</h2>
+                <span class="badge pending-badge" id="pending-badge"
+                  >0 pending</span
+                >
+              </div>
+              <div class="header-actions">
+                <button class="icon-btn-sm">
+                  <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <button class="icon-btn-sm">
+                  <i class="fa-solid fa-sliders"></i>
+                </button>
+              </div>
+            </div>
+            <div id="pending-list" class="task-list"></div>
+          </div>
+
+          <!-- Completed List Column -->
+          <div class="task-column">
+            <div class="column-header">
+              <div class="header-left">
+                <h2>Completed</h2>
+                <span class="badge completed-badge" id="completed-badge"
+                  >0 completed</span
+                >
+              </div>
+              <div class="header-actions">
+                <button class="clear-btn" id="clear-all-btn">
+                  <i class="fa-solid fa-bars"></i> Clear all
+                </button>
+              </div>
+            </div>
+            <div id="completed-list" class="task-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
