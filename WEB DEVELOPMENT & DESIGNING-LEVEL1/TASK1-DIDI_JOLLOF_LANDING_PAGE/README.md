@@ -1,54 +1,20 @@
 # DIDI JOLLOF - Landing Page
 
-## Project Information
+## Objective
+The objective of this project is to build a responsive, visually appealing landing page for a West African restaurant brand called DIDI JOLLOF. The page aims to introduce the restaurant, present featured menu items, communicate brand identity, and provide clear call-to-action touchpoints for visitors.
 
-- **Title:** DIDI JOLLOF - Authentic West African Flavor
+## Steps Performed
+1. Planned the structure and content hierarchy, organizing the page into semantic sections: header navigation, hero banner, about section, menu highlights, and contact footer.
+2. Built the semantic HTML5 layout with proper headings, accessible navigation elements, structured cards, and descriptive image tags.
+3. Implemented a responsive styling architecture using CSS3 Flexbox and CSS Grid in `css/styles.css`.
+4. Applied a custom color palette centered on warm orange and earth tones reflecting West African culinary aesthetics.
+5. Optimized typography, spacing, and button interactions with hover states and smooth scrolling transitions across mobile and desktop viewports.
 
-## Project Structure
+## Tools Used
+- HTML5: Page architecture and semantic structure
+- CSS3: Custom layouts, Flexbox, CSS Grid, media queries, and styling
+- Modern Web Browser: Testing and cross-device visual verification
 
-```
-TASK1-DIDI_JOLLOF_LANDING_PAGE/
-├── index.html          # Main HTML file
-├── css/
-│   └── styles.css      # Main stylesheet
-├── assets/
-│   └── images/         # Image directory for storing downloaded assets
-└── README.md           # This file
-```
+## Outcome
+A lightweight, fully responsive culinary landing page that highlights signature dishes, provides seamless navigation, and delivers an engaging brand experience across mobile, tablet, and desktop devices without external JavaScript dependencies.
 
-## Setup Instructions
-
-1. **Download Assets:** Use the following command to download images from hosted URLs:
-
-   ```bash
-   curl -L -o assets/images/hero-image.jpg "[IMAGE_URL]"
-   ```
-
-2. **Open in Browser:**
-   - Open `index.html` in your web browser to view the landing page
-   - Or use a local server:
-     ```bash
-     python -m http.server 8000
-     ```
-   - Then visit `http://localhost:8000` in your browser
-
-## Features
-
-- Responsive design (mobile and desktop)
-- Clean and modern layout
-- Smooth scrolling navigation
-- CTA (Call-to-Action) button
-- Multiple sections: Hero, About, Menu, Contact
-
-## Notes
-
-- All styling is in `css/styles.css`
-- Main color scheme: Orange (#d4501f) for Jollof authentic feel
-- Uses semantic HTML5 structure
-- No JavaScript - pure HTML5 and CSS3
-- Mobile responsive using CSS Grid and Flexbox
-
----
-
-**Created:** September 1, 2026
-**Stitch Design Export Ready**
